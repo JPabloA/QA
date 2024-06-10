@@ -10,8 +10,6 @@ from time import sleep
 USERNAME = os.getenv('LOGIN_USERNAME', 'moisessoes@gmail.com')
 PASSWORD = os.getenv('LOGIN_PASSWORD', '123456')
 
-# Ruta de la imagen a subir
-IMAGE_PATH = r"C:\Users\Mois\Downloads\comprobante_pago.jpeg"
 PATH = 'img/modifyCalendar/'
 
 # Nuevos valores para los inputs
@@ -22,13 +20,6 @@ NEW_EVENT_DESCRIPTION = "Necesita maquillaje de Jesús rey de Reyes"
 
 # Crear un objeto WebDriver
 driver = webdriver.Firefox()
-
-def wait_for_images_to_load(driver):
-    WebDriverWait(driver, 10).until(
-        lambda d: d.execute_script(
-            'return Array.from(document.images).every(img => img.complete && img.naturalHeight !== 0)'
-        )
-    )
 
 try:
     # -------------------- Iniciar sesión --------------------
@@ -62,8 +53,6 @@ try:
     WebDriverWait(driver, 10).until(
         EC.url_contains('https://master.d2fcoa3vsgqot0.amplifyapp.com/userView/mainPage')
     )
-
-    wait_for_images_to_load(driver)
 
     # Tomar una captura de pantalla del resultado del login
     driver.save_screenshot(f'{PATH}/login_result.png')
