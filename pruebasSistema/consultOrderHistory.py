@@ -92,7 +92,6 @@ try:
     # Tomar una captura de pantalla del cart history
     driver.save_screenshot('img/consultHistory/cart_history.png')
       
-
 finally:
     # Cerrar el navegador
     driver.quit()

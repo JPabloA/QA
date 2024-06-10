@@ -11,8 +11,8 @@ USERNAME = os.getenv('LOGIN_USERNAME', 'cliente@mail.com')
 PASSWORD = os.getenv('LOGIN_PASSWORD', 'cliente')
 
 # Ruta de la imagen a subir
-IMAGE_PATH = r"C:\Users\Mois\Downloads\comprobante_pago.jpeg"
-PATH = 'img/realizarCompra/'
+IMAGE_PATH = r"C:\Users\josep\Downloads\OIP.jpg"
+PATH = 'img/makePurchase/'
 
 # Nuevos valores para los inputs
 PROVINCIA = "San José"
